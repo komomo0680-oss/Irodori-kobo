@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>イロドリ工房 | バナー用カラーツール</title>
+<link rel="icon" type="image/png" sizes="128x128" href="data:image/png;base64,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">
+<style>
+  :root{
+    --bg:#faf6f0; --card:#ffffff; --ink:#2b2620; --muted:#8a7f72;
+    --line:#e8ded2; --accent:#e07b26; --accent-dark:#b85e14;
+    --ok:#1e7d32; --ng:#b3261e; --radius:14px;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  body{margin:0; font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif; background:var(--bg); color:var(--ink);}
+  header{padding:18px 16px 8px; max-width:980px; margin:0 auto;}
+  header h1{font-size:22px; margin:0 0 4px;}
+  header p{margin:0; color:var(--muted); font-size:13px; line-height:1.6;}
+  main{max-width:980px; margin:0 auto; padding:10px 12px 40px; display:flex; flex-direction:column; gap:14px;}
+  section{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px;}
+  section h2{font-size:16px; margin:0 0 6px;}
+  section .desc{font-size:12.5px; color:var(--muted); margin:0 0 12px; line-height:1.6;}
+  .row{display:flex; flex-wrap:wrap; gap:8px; align-items:center;}
+  .row + .row{margin-top:10px;}
+  button{font:inherit; font-size:14px; border:1px solid var(--line); background:#fff; color:var(--ink);
+    border-radius:10px; padding:9px 14px; cursor:pointer;}
+  button:active{transform:scale(.98);}
+  button.primary{background:var(--accent); border-color:var(--accent); color:#fff; font-weight:700;}
+  button.primary:active{background:var(--accent-dark);}
+  button.small{font-size:12.5px; padding:6px 10px;}
+  input[type="text"], select{font:inherit; font-size:14px; padding:9px 10px; border:1px solid var(--line); border-radius:10px; background:#fff; color:var(--ink);}
+  input[type="color"]{width:52px; height:40px; border:1px solid var(--line); border-radius:10px; background:#fff; padding:2px; cursor:pointer;}
+  label.mode{font-size:13.5px; border:1px solid var(--line); border-radius:999px; padding:7px 12px; cursor:pointer;}
+  label.mode input{accent-color:var(--accent);}
+  #drop{border:2px dashed var(--line); border-radius:var(--radius); padding:14px; text-align:center; color:var(--muted); font-size:13.5px;}
+  #drop.over{border-color:var(--accent); color:var(--accent-dark);}
+  #imgWrap{margin-top:12px; display:none;}
+  #imgCanvas{max-width:100%; border-radius:10px; border:1px solid var(--line); touch-action:none; cursor:crosshair;}
+  .hint{font-size:12px; color:var(--muted); margin-top:6px;}
+  #pickedBar{display:none; margin-top:10px; border:1px solid var(--line); border-radius:10px; padding:9px 10px; align-items:center; gap:10px; background:#fffdf9;}
+  #pickedBar .pchip{width:40px; height:40px; border-radius:8px; border:1px solid var(--line); flex:none;}
+  #pickedBar .phex{font-weight:800; font-family:ui-monospace,Menlo,monospace; font-size:16px;}
+  #pickedBar .plabel{font-size:11.5px; color:var(--muted);}
+  .checker{background-image:conic-gradient(#ddd 0 25%, #fff 0 50%, #ddd 0 75%, #fff 0); background-size:16px 16px; border:1px solid var(--line); border-radius:10px; max-width:100%;}
+  #cutPreviewWrap{display:none; margin-top:10px;}
+  .swatches{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+  .sw{width:76px; border:1px solid var(--line); border-radius:10px; overflow:hidden; cursor:pointer; background:#fff; text-align:center;}
+  .sw .chip{height:44px;}
+  .sw .lab{font-size:10.5px; padding:4px 2px; line-height:1.35; word-break:break-all;}
+  .sw .lab b{display:block; font-size:11px;}
+  .bigSwatch{height:92px; border-radius:12px; border:1px solid var(--line); position:relative;}
+  .bigSwatch span{position:absolute; left:10px; bottom:8px; font-size:12px; background:rgba(255,255,255,.85); padding:2px 8px; border-radius:999px;}
+  .codes{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:8px; margin-top:10px;}
+  .code{border:1px solid var(--line); border-radius:10px; padding:9px 10px; cursor:pointer; background:#fff; text-align:left; width:100%;}
+  .code small{display:block; color:var(--muted); font-size:11px;}
+  .code b{font-size:14.5px; font-family:ui-monospace,Menlo,monospace;}
+  .scale{display:flex; border-radius:10px; overflow:hidden; border:1px solid var(--line); margin-top:8px;}
+  .scale div{flex:1; height:46px; cursor:pointer;}
+  .ratioBar{display:flex; height:30px; border-radius:8px; overflow:hidden; border:1px solid var(--line); margin-top:8px; font-size:11px; color:#fff;}
+  .ratioBar div{display:flex; align-items:center; justify-content:center; text-shadow:0 1px 2px rgba(0,0,0,.35); min-width:0; white-space:nowrap; overflow:hidden;}
+  .badge{display:inline-block; font-size:12px; padding:3px 10px; border-radius:999px; border:1px solid var(--line);}
+  .badge.ok{background:#e6f4ea; color:var(--ok); border-color:#bfe3c8; font-weight:700;}
+  .badge.ng{background:#fdecea; color:var(--ng); border-color:#f5c6c2;}
+  .ratioNum{font-size:30px; font-weight:800;}
+  #gradPreview{height:74px; border-radius:12px; border:1px solid var(--line);}
+  .mocks{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  @media (max-width:560px){ .mocks{grid-template-columns:1fr;} }
+  .mock{border-radius:12px; padding:16px 14px; border:1px solid var(--line); min-height:150px; display:flex; flex-direction:column; gap:8px;}
+  .mock .ttl{font-size:20px; font-weight:800; line-height:1.3;}
+  .mock .sub{font-size:12.5px; line-height:1.5;}
+  .mock .cta{align-self:flex-start; margin-top:auto; font-size:13px; font-weight:700; padding:8px 14px; border-radius:999px;}
+  .mockTag{font-size:12px; color:var(--muted); margin-bottom:6px;}
+  .proj{border:1px solid var(--line); border-radius:10px; padding:10px; margin-top:8px;}
+  .proj .name{font-weight:700; font-size:14px;}
+  .proj .mini{display:flex; gap:4px; margin:6px 0;}
+  .proj .mini div{width:26px; height:18px; border-radius:4px; border:1px solid var(--line);}
+  #toast{position:fixed; left:50%; bottom:22px; transform:translateX(-50%) translateY(80px); background:#2b2620; color:#fff;
+    padding:10px 18px; border-radius:999px; font-size:13.5px; transition:transform .25s; z-index:50; max-width:88vw; text-align:center;}
+  #toast.show{transform:translateX(-50%) translateY(0);}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  @media (max-width:640px){ .grid2{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎨 イロドリ工房</h1>
+  <p>バナー制作のための自分用ツール。色を取る → 番号を見る → 配色を作る → 読みやすさを確認する、までを1ページで。データはこのブラウザの中だけに保存されます。</p>
+</header>
+<main>
+
+  <!-- 1. 色を取る -->
+  <section>
+    <h2>1. 色を取る（スポイト・画像抽出）</h2>
+    <p class="desc">商品写真や参考バナーを読み込んで、クリックで色を取り、全体の主要色も自動で抜き出します。「範囲の平均」は、文字を置きたい場所をドラッグで囲むと平均色と合う文字色を出します。</p>
+    <div id="drop">画像をここにドラッグ＆ドロップ、または
+      <label style="text-decoration:underline; cursor:pointer;">ファイルを選ぶ
+        <input id="fileInput" type="file" accept="image/*" hidden>
+      </label>
+    </div>
+    <div class="row" style="margin-top:10px;">
+      <label class="mode"><input type="radio" name="mode" value="pick" checked> スポイト（クリック）</label>
+      <label class="mode"><input type="radio" name="mode" value="area"> 範囲の平均（ドラッグ）</label>
+      <label class="mode"><input type="radio" name="mode" value="crop"> 切り抜き・四角（ドラッグ）</label>
+      <label class="mode"><input type="radio" name="mode" value="lasso"> 輪郭をなぞって切り抜き（指・タップ）</label>
+      <button id="extractBtn" type="button">主要色を自動抽出</button>
+      <button id="eyeBtn" type="button">画面から取る（対応ブラウザのみ）</button>
+    </div>
+    <div id="imgWrap">
+      <canvas id="imgCanvas"></canvas>
+      <div class="hint" id="imgHint">画像をクリックすると、その場所の色を選んだ色にします。</div>
+      <div id="areaResult" class="hint" style="font-size:13px;"></div>
+      <div id="pickedBar">
+        <div class="pchip" id="pickedChip"></div>
+        <div style="flex:1; min-width:0;">
+          <div class="phex" id="pickedHex">#E07B26</div>
+          <div class="plabel">取った色（下の「2. 選んだ色」にも反映されています）</div>
+        </div>
+        <button id="pickedCopy" class="small" type="button">番号をコピー</button>
+      </div>
+      <div id="cropControls" style="margin-top:12px; border-top:1px solid var(--line); padding-top:12px;">
+        <div class="row">
+          <span style="font-size:13px; font-weight:700;">切り抜き</span>
+          <select id="cropRatio">
+            <option value="free">比率フリー</option>
+            <option value="1">正方形 1:1（1080×1080想定）</option>
+            <option value="1.91">横長 1.91:1（1200×628想定）</option>
+            <option value="0.8">縦長 4:5</option>
+            <option value="1.78">16:9</option>
+          </select>
+          <button id="cropDownload" class="small" type="button">切り抜きをダウンロード</button>
+          <button id="cropApply" class="small" type="button">切り抜いて置き換える</button>
+          <button id="cropUndo" class="small" type="button">元の画像に戻す</button>
+        </div>
+        <div class="hint" id="cropInfo">「切り抜き」モードで画像をドラッグすると範囲を選べます。比率を選ぶと、その形に合わせて範囲が決まります。</div>
+      </div>
+      <div id="lassoControls" style="margin-top:12px; border-top:1px solid var(--line); padding-top:12px;">
+        <div class="row">
+          <span style="font-size:13px; font-weight:700;">輪郭なぞり切り抜き</span>
+          <label style="font-size:12.5px;">ふちのぼかし
+            <select id="lassoFeather">
+              <option value="0">なし</option>
+              <option value="1">弱 1px</option>
+              <option value="2" selected>中 2px</option>
+              <option value="4">強 4px</option>
+            </select>
+          </label>
+          <button id="lassoCut" class="small" type="button">輪郭を閉じて切り抜く</button>
+          <button id="lassoClear" class="small" type="button">なぞり直す</button>
+          <button id="lassoDownload" class="small" type="button">透明PNGでダウンロード</button>
+          <button id="lassoApply" class="small" type="button">切り抜きを置き換える</button>
+        </div>
+        <div class="hint" id="lassoInfo">「輪郭をなぞって切り抜き」モードで、残したいものの周りを指でなぞってください。途中で指を離しても、続きからなぞれます。なぞり終わったら「輪郭を閉じて切り抜く」。</div>
+        <div id="cutPreviewWrap">
+          <div class="hint" style="margin-bottom:6px;">切り抜き結果（市松模様の部分が透明です）</div>
+          <canvas id="cutPreview" class="checker"></canvas>
+        </div>
+      </div>
+      <h3 style="font-size:13.5px; margin:14px 0 0;">画像の主要色（占有率つき）</h3>
+      <div id="extracted" class="swatches"></div>
+    </div>
+  </section>
+
+  <!-- 2. 選んだ色 -->
+  <section>
+    <h2>2. 選んだ色（番号・コピー・階段）</h2>
+    <p class="desc">各番号はクリックでそのままコピーできます。制作ツールへの貼り付けにどうぞ。</p>
+    <div class="row">
+      <input type="color" id="colorInput" value="#e07b26">
+      <input type="text" id="hexInput" value="#E07B26" size="10" spellcheck="false">
+      <button id="applyHex" type="button">この色にする</button>
+    </div>
+    <div class="bigSwatch" id="bigSwatch" style="margin-top:12px; background:#e07b26;"><span id="bigHex">#E07B26</span></div>
+    <div class="codes" id="codes"></div>
+    <h3 style="font-size:13.5px; margin:16px 0 0;">明るさの階段（クリックで選択）</h3>
+    <div class="scale" id="shadeScale"></div>
+    <h3 style="font-size:13.5px; margin:14px 0 0;">最近取った色（履歴）</h3>
+    <div id="history" class="swatches"></div>
+    <div class="row"><button id="clearHistory" class="small" type="button">履歴を消す</button></div>
+  </section>
+
+  <!-- 3. 配色 -->
+  <section>
+    <h2>3. 配色を作る（役割つき）</h2>
+    <p class="desc">選んだ色をメインに、ベース（70%）・メイン（25%）・アクセント／CTA（5%）の役割で配色します。比率バーで量のバランスも確認できます。</p>
+    <div class="row">
+      <select id="harmony">
+        <option value="complementary">補色（メリハリ）</option>
+        <option value="analogous">類似色（なじませる）</option>
+        <option value="triad">トライアド（3色バランス）</option>
+        <option value="mono">モノクローム（同系で格調）</option>
+      </select>
+      <button id="makePalette" class="primary" type="button">配色を作る</button>
+      <button id="setA" type="button">これをA案に</button>
+      <button id="setB" type="button">これをB案に</button>
+    </div>
+    <div id="palette" class="swatches"></div>
+    <div class="ratioBar" id="ratioBar"></div>
+  </section>
+
+  <div class="grid2">
+    <!-- 4. コントラスト -->
+    <section>
+      <h2>4. コントラスト判定</h2>
+      <p class="desc">文字色と背景色の読みやすさ。AAは通常文字で4.5以上、大きな文字で3以上が目安です。</p>
+      <div class="row">
+        <span style="font-size:13px;">文字</span><input type="color" id="fgInput" value="#ffffff">
+        <span style="font-size:13px;">背景</span><input type="color" id="bgInput" value="#e07b26">
+        <button id="swapContrast" class="small" type="button">入れ替え</button>
+        <button id="bgFromCurrent" class="small" type="button">背景＝選んだ色</button>
+      </div>
+      <div class="row" style="margin-top:14px;">
+        <span class="ratioNum" id="ratioNum">–</span>
+        <span id="ratioBadges"></span>
+      </div>
+      <div id="contrastSuggest" class="hint" style="font-size:13px;"></div>
+    </section>
+
+    <!-- 5. グラデーション -->
+    <section>
+      <h2>5. グラデーション</h2>
+      <p class="desc">2色のあいだを作ります。中間の色もクリックで取れます。CSSもコピーできます。</p>
+      <div class="row">
+        <span style="font-size:13px;">色A</span><input type="color" id="gradA" value="#3a2405">
+        <span style="font-size:13px;">色B</span><input type="color" id="gradB" value="#d9a441">
+        <button id="gradFromCurrent" class="small" type="button">色B＝選んだ色</button>
+        <button id="copyCss" class="small" type="button">CSSをコピー</button>
+      </div>
+      <div id="gradPreview" style="margin-top:12px;"></div>
+      <div class="scale" id="gradSteps"></div>
+    </section>
+  </div>
+
+  <!-- 6. A/Bモック -->
+  <section>
+    <h2>6. バナー見本でA/B比べ</h2>
+    <p class="desc">配色をダミーバナーに当てて並べます。「3. 配色を作る」で案を作り、A案／B案ボタンで反映してください。</p>
+    <div class="mocks">
+      <div><div class="mockTag">A案</div><div class="mock" id="mockA"></div></div>
+      <div><div class="mockTag">B案</div><div class="mock" id="mockB"></div></div>
+    </div>
+  </section>
+
+  <!-- 7. 保存 -->
+  <section>
+    <h2>7. 案件フォルダ（パレット保存）</h2>
+    <p class="desc">バナーごとに「今の配色」を名前を付けて保存します。このブラウザ内にだけ保存されます。</p>
+    <div class="row">
+      <input type="text" id="projName" placeholder="例：美容液_金" size="22">
+      <button id="saveProj" class="primary" type="button">今の配色を保存</button>
+    </div>
+    <div id="projects"></div>
+  </section>
+
+  <p class="hint" style="text-align:center;">試作版です。使いにくい所・足りない所はTODOとして教えてください。直します。</p>
+</main>
+<div id="toast"></div>
+<script>
+"use strict";
+/* ---------- 色の基本変換 ---------- */
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function rgbToHex(r,g,b){return "#"+[r,g,b].map(v=>clamp(Math.round(v),0,255).toString(16).padStart(2,"0")).join("").toUpperCase();}
+function hexToRgb(hex){
+  hex=String(hex).trim().replace(/^#/,"");
+  if(/^[0-9a-fA-F]{3}$/.test(hex)) hex=hex.split("").map(c=>c+c).join("");
+  if(!/^[0-9a-fA-F]{6}$/.test(hex)) return null;
+  return {r:parseInt(hex.slice(0,2),16), g:parseInt(hex.slice(2,4),16), b:parseInt(hex.slice(4,6),16)};
+}
+function rgbToHsl(r,g,b){
+  r/=255; g/=255; b/=255;
+  const mx=Math.max(r,g,b), mn=Math.min(r,g,b); let h=0,s=0; const l=(mx+mn)/2;
+  if(mx!==mn){ const d=mx-mn; s=l>0.5? d/(2-mx-mn) : d/(mx+mn);
+    if(mx===r) h=(g-b)/d+(g<b?6:0); else if(mx===g) h=(b-r)/d+2; else h=(r-g)/d+4; h*=60; }
+  return {h:Math.round(h), s:Math.round(s*100), l:Math.round(l*100)};
+}
+function hslToRgb(h,s,l){
+  h=((h%360)+360)%360; s=clamp(s,0,100)/100; l=clamp(l,0,100)/100;
+  const c=(1-Math.abs(2*l-1))*s, x=c*(1-Math.abs(((h/60)%2)-1)), m=l-c/2;
+  let r=0,g=0,b=0;
+  if(h<60){r=c;g=x;} else if(h<120){r=x;g=c;} else if(h<180){g=c;b=x;}
+  else if(h<240){g=x;b=c;} else if(h<300){r=x;b=c;} else {r=c;b=x;}
+  return {r:Math.round((r+m)*255), g:Math.round((g+m)*255), b:Math.round((b+m)*255)};
+}
+function rgbToHsv(r,g,b){
+  r/=255; g/=255; b/=255; const mx=Math.max(r,g,b), mn=Math.min(r,g,b), d=mx-mn;
+  let h=0; if(d){ if(mx===r) h=((g-b)/d)%6; else if(mx===g) h=(b-r)/d+2; else h=(r-g)/d+4; h*=60; if(h<0)h+=360; }
+  return {h:Math.round(h), s:Math.round(mx? d/mx*100:0), v:Math.round(mx*100)};
+}
+function rgbToCmyk(r,g,b){
+  const rr=r/255, gg=g/255, bb=b/255, k=1-Math.max(rr,gg,bb);
+  if(k===1) return {c:0,m:0,y:0,k:100};
+  return {c:Math.round((1-rr-k)/(1-k)*100), m:Math.round((1-gg-k)/(1-k)*100),
+          y:Math.round((1-bb-k)/(1-k)*100), k:Math.round(k*100)};
+}
+function luminance(r,g,b){
+  const f=v=>{ v/=255; return v<=0.03928? v/12.92 : Math.pow((v+0.055)/1.055,2.4); };
+  return 0.2126*f(r)+0.7152*f(g)+0.0722*f(b);
+}
+function contrastRatio(c1,c2){
+  const l1=luminance(c1.r,c1.g,c1.b), l2=luminance(c2.r,c2.g,c2.b);
+  return (Math.max(l1,l2)+0.05)/(Math.min(l1,l2)+0.05);
+}
+function mix(c1,c2,t){ return {r:Math.round(c1.r+(c2.r-c1.r)*t), g:Math.round(c1.g+(c2.g-c1.g)*t), b:Math.round(c1.b+(c2.b-c1.b)*t)}; }
+const WHITE={r:255,g:255,b:255}, BLACK={r:20,g:18,b:16};
+function bestTextOn(bg){ return contrastRatio(bg,WHITE)>=contrastRatio(bg,BLACK)? "#FFFFFF":"#141210"; }
+
+/* ---------- 状態 ---------- */
+let current={r:224,g:123,b:38};
+let palette=[];           // {hex, role}
+let paletteA=null, paletteB=null;
+let historyList=[]; try{ historyList=JSON.parse(localStorage.getItem("cba_history")||"[]"); }catch(e){}
+let projects=[];    try{ projects=JSON.parse(localStorage.getItem("cba_projects")||"[]"); }catch(e){}
+
+/* ---------- 共通UI ---------- */
+const $=id=>document.getElementById(id);
+let toastTimer=null;
+function toast(msg){
+  const t=$("toast"); t.textContent=msg; t.classList.add("show");
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove("show"),1800);
+}
+async function copyText(txt,label){
+  try{ await navigator.clipboard.writeText(txt); toast((label||txt)+" をコピーしました"); }
+  catch(e){ toast("コピーできませんでした: "+txt); }
+}
+function swatchEl(hex,label,sub){
+  const d=document.createElement("div"); d.className="sw";
+  d.innerHTML='<div class="chip" style="background:'+hex+'"></div><div class="lab"><b>'+hex+'</b>'+(label?label:"")+(sub?("<br>"+sub):"")+'</div>';
+  d.title="クリックでこの色を選択";
+  d.addEventListener("click",()=>setCurrent(hexToRgb(hex), true));
+  return d;
+}
+function pushHistory(hex){
+  hex=hex.toUpperCase();
+  historyList=[hex].concat(historyList.filter(h=>h!==hex)).slice(0,30);
+  try{ localStorage.setItem("cba_history", JSON.stringify(historyList)); }catch(e){}
+  renderHistory();
+}
+function renderHistory(){
+  const box=$("history"); box.innerHTML="";
+  if(!historyList.length){ box.innerHTML='<span class="hint">まだ履歴はありません。色を取る・選ぶとここに残ります。</span>'; return; }
+  historyList.forEach(h=>box.appendChild(swatchEl(h,"")));
+}
+
+/* ---------- 選んだ色の表示 ---------- */
+function setCurrent(rgb, fromClick){
+  if(!rgb) return;
+  current={r:clamp(Math.round(rgb.r),0,255), g:clamp(Math.round(rgb.g),0,255), b:clamp(Math.round(rgb.b),0,255)};
+  const hex=rgbToHex(current.r,current.g,current.b);
+  $("colorInput").value=hex; $("hexInput").value=hex;
+  $("bigSwatch").style.background=hex; $("bigHex").textContent=hex;
+  const hsl=rgbToHsl(current.r,current.g,current.b), hsv=rgbToHsv(current.r,current.g,current.b), cmyk=rgbToCmyk(current.r,current.g,current.b);
+  const rows=[
+    ["HEX", hex], ["RGB", "rgb("+current.r+", "+current.g+", "+current.b+")"],
+    ["HSL", "hsl("+hsl.h+", "+hsl.s+"%, "+hsl.l+"%)"], ["HSV / HSB", hsv.h+", "+hsv.s+"%, "+hsv.v+"%"],
+    ["CMYK（印刷参考）", cmyk.c+", "+cmyk.m+", "+cmyk.y+", "+cmyk.k]
+  ];
+  const box=$("codes"); box.innerHTML="";
+  rows.forEach(([name,val])=>{
+    const b=document.createElement("button"); b.className="code"; b.type="button";
+    b.innerHTML="<small>"+name+"（クリックでコピー）</small><b></b>";
+    b.querySelector("b").textContent=val;
+    b.addEventListener("click",()=>copyText(name==="HEX"?hex:val, name));
+    box.appendChild(b);
+  });
+  // 階段
+  const sc=$("shadeScale"); sc.innerHTML="";
+  for(let i=0;i<10;i++){
+    const l=92-i*9, c=hslToRgb(hsl.h, hsl.s, l), hx=rgbToHex(c.r,c.g,c.b);
+    const d=document.createElement("div"); d.style.background=hx; d.title=hx;
+    d.addEventListener("click",()=>setCurrent(c,true));
+    sc.appendChild(d);
+  }
+  if(fromClick) pushHistory(hex);
+  updateContrast(); updateGradient(false);
+}
+$("colorInput").addEventListener("input",e=>{ const c=hexToRgb(e.target.value); if(c) setCurrent(c,false); });
+$("colorInput").addEventListener("change",e=>{ const c=hexToRgb(e.target.value); if(c) pushHistory(rgbToHex(c.r,c.g,c.b)); });
+$("applyHex").addEventListener("click",()=>{
+  const c=hexToRgb($("hexInput").value);
+  if(c){ setCurrent(c,true); } else toast("色番号の形式を確認してください（例 #E07B26）");
+});
+$("clearHistory").addEventListener("click",()=>{ historyList=[]; try{localStorage.removeItem("cba_history");}catch(e){} renderHistory(); });
+
+/* ---------- 画像スポイト・抽出・範囲平均 ---------- */
+const canvas=$("imgCanvas"), ctx=canvas.getContext("2d",{willReadFrequently:true});
+let imgLoaded=false, dragStart=null;
+let imgSnapshot=document.createElement("canvas");   // 現在表示中の画像（そのまま）
+let origSnapshot=document.createElement("canvas");  // 読み込み直後の画像（切り抜きを戻す用）
+let cropRect=null;                                   // {x,y,w,h} canvas座標
+function takeSnapshot(){
+  imgSnapshot.width=canvas.width; imgSnapshot.height=canvas.height;
+  imgSnapshot.getContext("2d").drawImage(canvas,0,0);
+}
+function redrawImage(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.drawImage(imgSnapshot,0,0);
+}
+function drawSelection(x0,y0,x1,y1){
+  redrawImage();
+  const w=x1-x0, h=y1-y0;
+  ctx.save();
+  ctx.fillStyle="rgba(0,0,0,0.35)";
+  ctx.fillRect(0,0,canvas.width,y0); ctx.fillRect(0,y1,canvas.width,canvas.height-y1);
+  ctx.fillRect(0,y0,x0,h); ctx.fillRect(x1,y0,canvas.width-x1,h);
+  ctx.strokeStyle="#e07b26"; ctx.lineWidth=3; ctx.setLineDash([8,5]);
+  ctx.strokeRect(x0,y0,w,h);
+  ctx.restore();
+}
+function loadImageFile(file){
+  if(!file || !file.type.startsWith("image/")){ toast("画像ファイルを選んでください"); return; }
+  const url=URL.createObjectURL(file), img=new Image();
+  img.onload=()=>{
+    const maxW=920, scale=Math.min(1, maxW/img.naturalWidth);
+    canvas.width=Math.round(img.naturalWidth*scale); canvas.height=Math.round(img.naturalHeight*scale);
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+    $("imgWrap").style.display="block"; imgLoaded=true; cropRect=null;
+    takeSnapshot();
+    origSnapshot.width=canvas.width; origSnapshot.height=canvas.height;
+    origSnapshot.getContext("2d").drawImage(canvas,0,0);
+    if(typeof lassoStrokes!=="undefined"){ lassoStrokes=[]; lastCut=null; $("cutPreviewWrap").style.display="none"; }
+    extractColors();
+    URL.revokeObjectURL(url);
+  };
+  img.src=url;
+}
+$("fileInput").addEventListener("change",e=>loadImageFile(e.target.files[0]));
+const drop=$("drop");
+["dragover","dragenter"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault(); drop.classList.add("over");}));
+["dragleave","drop"].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault(); drop.classList.remove("over");}));
+drop.addEventListener("drop",e=>loadImageFile(e.dataTransfer.files[0]));
+function canvasPos(e){
+  const r=canvas.getBoundingClientRect();
+  return { x:clamp(Math.floor((e.clientX-r.left)*canvas.width/r.width),0,canvas.width-1),
+           y:clamp(Math.floor((e.clientY-r.top)*canvas.height/r.height),0,canvas.height-1) };
+}
+function pickAt(x,y){ const d=imgSnapshot.getContext("2d").getImageData(x,y,1,1).data; return {r:d[0],g:d[1],b:d[2]}; }
+function makeRect(a,b){
+  let x0=Math.min(a.x,b.x), x1=Math.max(a.x,b.x), y0=Math.min(a.y,b.y), y1=Math.max(a.y,b.y);
+  const mode=document.querySelector('input[name="mode"]:checked').value;
+  if(mode==="crop"){
+    const ratio=parseFloat($("cropRatio").value);
+    if(!isNaN(ratio) && $("cropRatio").value!=="free"){
+      let w=x1-x0, h=w/ratio;
+      const dirY=(b.y>=a.y)?1:-1;
+      if(dirY>0){ y0=a.y; y1=a.y+h; } else { y1=a.y; y0=a.y-h; }
+      if(y1>canvas.height){ const diff=y1-canvas.height; y1-=diff; y0-=diff; }
+      if(y0<0){ y1-=y0; y0=0; }
+    }
+  }
+  return {x0:Math.round(clamp(x0,0,canvas.width)), y0:Math.round(clamp(y0,0,canvas.height)),
+          x1:Math.round(clamp(x1,0,canvas.width)), y1:Math.round(clamp(y1,0,canvas.height))};
+}
+function showPicked(rgb){
+  const hex=rgbToHex(rgb.r,rgb.g,rgb.b);
+  const bar=$("pickedBar"); bar.style.display="flex";
+  $("pickedChip").style.background=hex; $("pickedHex").textContent=hex;
+  toast(hex+" を取りました");
+}
+$("pickedCopy").addEventListener("click",()=>copyText($("pickedHex").textContent,"色番号"));
+let lastPickAt=0, lastPickKey="";
+function doPick(p){
+  const key=p.x+","+p.y, now=Date.now();
+  if(now-lastPickAt<600 && key===lastPickKey) return; // pointerdownとclickの二重発火を防ぐ
+  lastPickAt=now; lastPickKey=key;
+  const c=pickAt(p.x,p.y); setCurrent(c,true); showPicked(c);
+}
+canvas.addEventListener("pointerdown",e=>{
+  if(!imgLoaded) return;
+  const mode=document.querySelector('input[name="mode"]:checked').value, p=canvasPos(e);
+  if(mode==="pick"){ doPick(p); }
+  else if(mode==="lasso"){ lassoStrokes.push([p]); lassoActive=true; try{ canvas.setPointerCapture(e.pointerId); }catch(err){} renderLasso(); }
+  else { dragStart=p; try{ canvas.setPointerCapture(e.pointerId); }catch(err){} }
+});
+canvas.addEventListener("click",e=>{
+  if(!imgLoaded) return;
+  const mode=document.querySelector('input[name="mode"]:checked').value;
+  if(mode==="pick"){ doPick(canvasPos(e)); }
+});
+canvas.addEventListener("pointermove",e=>{
+  if(!imgLoaded) return;
+  const mode=document.querySelector('input[name="mode"]:checked').value;
+  if(mode==="lasso"){
+    if(!lassoActive || !lassoStrokes.length) return;
+    const p=canvasPos(e), stroke=lassoStrokes[lassoStrokes.length-1], last=stroke[stroke.length-1];
+    if(Math.hypot(p.x-last.x,p.y-last.y)>=3){ stroke.push(p); renderLasso(); }
+    return;
+  }
+  if(!dragStart) return;
+  if(mode!=="area" && mode!=="crop") return;
+  const r=makeRect(dragStart, canvasPos(e));
+  if(r.x1-r.x0>2 && r.y1-r.y0>2) drawSelection(r.x0,r.y0,r.x1,r.y1);
+});
+canvas.addEventListener("pointerup",e=>{
+  if(!imgLoaded) return;
+  const mode=document.querySelector('input[name="mode"]:checked').value;
+  if(mode==="lasso"){
+    if(lassoActive){ lassoActive=false; const n=lassoPoints().length;
+      $("lassoInfo").textContent="なぞり中： 点が "+n+" 個。続きをなぞるか、「輪郭を閉じて切り抜く」を押してください。始点と終点は自動でつながります。"; }
+    return;
+  }
+  if(!dragStart) return;
+  if(mode!=="area" && mode!=="crop"){ dragStart=null; return; }
+  const rect=makeRect(dragStart, canvasPos(e));
+  dragStart=null;
+  const x0=rect.x0, y0=rect.y0, x1=rect.x1, y1=rect.y1;
+  if(x1-x0<3 || y1-y0<3){ redrawImage(); toast("範囲が小さすぎます。ドラッグで囲んでください"); return; }
+  if(mode==="crop"){
+    cropRect={x:x0, y:y0, w:x1-x0, h:y1-y0};
+    drawSelection(x0,y0,x1,y1);
+    $("cropInfo").textContent="選択中： "+cropRect.w+" × "+cropRect.h+" px（この画像の実寸）。「切り抜きをダウンロード」か「切り抜いて置き換える」を押してください。";
+    return;
+  }
+  redrawImage();
+  const data=imgSnapshot.getContext("2d").getImageData(x0,y0,x1-x0,y1-y0).data;
+  let r=0,g=0,b=0,n=0;
+  for(let i=0;i<data.length;i+=16){ r+=data[i]; g+=data[i+1]; b+=data[i+2]; n++; }
+  const avg={r:Math.round(r/n), g:Math.round(g/n), b:Math.round(b/n)};
+  const hex=rgbToHex(avg.r,avg.g,avg.b), text=bestTextOn(avg);
+  $("areaResult").innerHTML="範囲の平均色: <b>"+hex+"</b> ／ おすすめ文字色: <b>"+text+"</b>（白と黒で読みやすい方）";
+  setCurrent(avg,true); showPicked(avg);
+});
+/* ---------- 切り抜きの実行 ---------- */
+function cropCanvasOut(){
+  if(!cropRect){ toast("先に「切り抜き」モードで範囲を選んでください"); return null; }
+  const out=document.createElement("canvas");
+  out.width=cropRect.w; out.height=cropRect.h;
+  out.getContext("2d").drawImage(imgSnapshot, cropRect.x, cropRect.y, cropRect.w, cropRect.h, 0, 0, cropRect.w, cropRect.h);
+  return out;
+}
+$("cropDownload").addEventListener("click",()=>{
+  const out=cropCanvasOut(); if(!out) return;
+  out.toBlob(blob=>{
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(blob); a.download="irodori-crop.png";
+    a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+    toast("切り抜きをダウンロードしました（"+out.width+"×"+out.height+"px）");
+  },"image/png");
+});
+$("cropApply").addEventListener("click",()=>{
+  const out=cropCanvasOut(); if(!out) return;
+  canvas.width=out.width; canvas.height=out.height;
+  ctx.drawImage(out,0,0); takeSnapshot(); cropRect=null; redrawImage();
+  $("cropInfo").textContent="切り抜きました。この画像で色取り・抽出ができます。戻す場合は「元の画像に戻す」。";
+  extractColors(); toast("切り抜いて置き換えました");
+});
+$("cropUndo").addEventListener("click",()=>{
+  if(!origSnapshot.width){ toast("戻せる元の画像がありません"); return; }
+  canvas.width=origSnapshot.width; canvas.height=origSnapshot.height;
+  ctx.drawImage(origSnapshot,0,0); takeSnapshot(); cropRect=null;
+  lassoStrokes=[]; lastCut=null;
+  $("cropInfo").textContent="元の画像に戻しました。";
+  extractColors();
+});
+/* ---------- 輪郭なぞり切り抜き ---------- */
+let lassoStrokes=[], lassoActive=false, lastCut=null;
+function lassoPoints(){ return lassoStrokes.flat(); }
+function renderLasso(){
+  redrawImage();
+  const pts=lassoPoints(); if(!pts.length) return;
+  ctx.save();
+  ctx.beginPath(); ctx.moveTo(pts[0].x,pts[0].y);
+  for(let i=1;i<pts.length;i++) ctx.lineTo(pts[i].x,pts[i].y);
+  ctx.strokeStyle="#e07b26"; ctx.lineWidth=3; ctx.lineJoin="round"; ctx.lineCap="round";
+  ctx.stroke();
+  ctx.fillStyle="#fff"; ctx.strokeStyle="#e07b26"; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.arc(pts[0].x,pts[0].y,6,0,Math.PI*2); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+function buildCutout(){
+  const pts=lassoPoints();
+  if(pts.length<8){ toast("点が少なすぎます。輪郭をなぞってください"); return null; }
+  let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+  pts.forEach(p=>{ minX=Math.min(minX,p.x); minY=Math.min(minY,p.y); maxX=Math.max(maxX,p.x); maxY=Math.max(maxY,p.y); });
+  const feather=parseInt($("lassoFeather").value,10)||0;
+  const pad=feather+2;
+  minX=Math.max(0,minX-pad); minY=Math.max(0,minY-pad);
+  maxX=Math.min(canvas.width,maxX+pad); maxY=Math.min(canvas.height,maxY+pad);
+  const w=Math.round(maxX-minX), h=Math.round(maxY-minY);
+  if(w<4||h<4){ toast("範囲が小さすぎます"); return null; }
+  // マスク（輪郭の内側が白）
+  const mask=document.createElement("canvas"); mask.width=w; mask.height=h;
+  const mctx=mask.getContext("2d");
+  mctx.beginPath(); mctx.moveTo(pts[0].x-minX,pts[0].y-minY);
+  for(let i=1;i<pts.length;i++) mctx.lineTo(pts[i].x-minX,pts[i].y-minY);
+  mctx.closePath(); mctx.fillStyle="#fff";
+  if(feather>0){ try{ mctx.filter="blur("+feather+"px)"; }catch(err){} }
+  mctx.fill(); mctx.filter="none";
+  // 本体：画像を置いてマスクで抜く
+  const out=document.createElement("canvas"); out.width=w; out.height=h;
+  const octx=out.getContext("2d");
+  octx.drawImage(imgSnapshot, minX, minY, w, h, 0, 0, w, h);
+  octx.globalCompositeOperation="destination-in";
+  octx.drawImage(mask,0,0);
+  octx.globalCompositeOperation="source-over";
+  return out;
+}
+$("lassoCut").addEventListener("click",()=>{
+  const out=buildCutout(); if(!out) return;
+  lastCut=out;
+  const prev=$("cutPreview"); prev.width=out.width; prev.height=out.height;
+  prev.getContext("2d").clearRect(0,0,out.width,out.height);
+  prev.getContext("2d").drawImage(out,0,0);
+  $("cutPreviewWrap").style.display="block";
+  $("lassoInfo").textContent="切り抜きました： "+out.width+" × "+out.height+" px。問題なければダウンロード、または置き換えを。";
+  toast("切り抜きました");
+});
+$("lassoClear").addEventListener("click",()=>{
+  lassoStrokes=[]; lastCut=null; redrawImage();
+  $("cutPreviewWrap").style.display="none";
+  $("lassoInfo").textContent="なぞり直します。残したいものの輪郭を指でなぞってください。";
+});
+$("lassoDownload").addEventListener("click",()=>{
+  const out=lastCut||buildCutout(); if(!out) return;
+  out.toBlob(blob=>{
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(blob); a.download="irodori-cutout.png";
+    a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+    toast("透明PNGをダウンロードしました");
+  },"image/png");
+});
+$("lassoApply").addEventListener("click",()=>{
+  const out=lastCut||buildCutout(); if(!out) return;
+  origSnapshot.width=canvas.width; origSnapshot.height=canvas.height;
+  origSnapshot.getContext("2d").drawImage(imgSnapshot,0,0);
+  canvas.width=out.width; canvas.height=out.height;
+  ctx.clearRect(0,0,canvas.width,canvas.height); ctx.drawImage(out,0,0);
+  takeSnapshot(); lassoStrokes=[]; cropRect=null;
+  $("lassoInfo").textContent="切り抜いた画像に置き換えました。「元の画像に戻す」で直前に戻せます。";
+  extractColors(); toast("置き換えました");
+});
+function extractColors(){
+  if(!imgLoaded) return;
+  const off=document.createElement("canvas"); off.width=110; off.height=110;
+  const octx=off.getContext("2d",{willReadFrequently:true});
+  octx.drawImage(canvas,0,0,110,110);
+  const data=octx.getImageData(0,0,110,110).data, counts=new Map(); let total=0;
+  for(let i=0;i<data.length;i+=4){
+    if(data[i+3]<200) continue;
+    const key=((data[i]>>5)<<6)|((data[i+1]>>5)<<3)|(data[i+2]>>5);
+    const cur=counts.get(key)||{n:0,r:0,g:0,b:0};
+    cur.n++; cur.r+=data[i]; cur.g+=data[i+1]; cur.b+=data[i+2]; counts.set(key,cur); total++;
+  }
+  const top=[...counts.values()].sort((a,b)=>b.n-a.n).slice(0,6);
+  const box=$("extracted"); box.innerHTML="";
+  top.forEach(c=>{
+    const avg={r:Math.round(c.r/c.n), g:Math.round(c.g/c.n), b:Math.round(c.b/c.n)};
+    box.appendChild(swatchEl(rgbToHex(avg.r,avg.g,avg.b), Math.round(c.n/total*100)+"%", ""));
+  });
+  if(!top.length) box.innerHTML='<span class="hint">色を抽出できませんでした。</span>';
+}
+$("extractBtn").addEventListener("click",()=>{ if(imgLoaded) extractColors(); else toast("先に画像を読み込んでください"); });
+$("eyeBtn").addEventListener("click",async()=>{
+  if(!window.EyeDropper){ toast("このブラウザは画面スポイト未対応です。画像スポイトを使ってください"); return; }
+  try{ const res=await new EyeDropper().open(); const c=hexToRgb(res.sRGBHex); if(c) setCurrent(c,true); }
+  catch(e){ /* キャンセル時は何もしない */ }
+});
+</script>
+<script>
+"use strict";
+/* ---------- 配色 ---------- */
+function buildPalette(){
+  const hsl=rgbToHsl(current.r,current.g,current.b);
+  const mode=$("harmony").value;
+  let accentHue=hsl.h, subHue=hsl.h;
+  if(mode==="complementary"){ accentHue=hsl.h+180; subHue=hsl.h+180; }
+  if(mode==="analogous"){ accentHue=hsl.h+38; subHue=hsl.h-30; }
+  if(mode==="triad"){ accentHue=hsl.h+120; subHue=hsl.h+240; }
+  if(mode==="mono"){ accentHue=hsl.h; subHue=hsl.h; }
+  const baseC = hslToRgb(hsl.h, clamp(hsl.s-18,8,60), 93);
+  const mainC = {r:current.r, g:current.g, b:current.b};
+  const accentC = mode==="mono" ? hslToRgb(hsl.h, clamp(hsl.s+10,0,100), clamp(hsl.l-26,12,88))
+                                : hslToRgb(accentHue, hsl.s, clamp(hsl.l,28,68));
+  const subC = hslToRgb(subHue, clamp(hsl.s-8,0,100), clamp(hsl.l+14,20,82));
+  const textC = hslToRgb(hsl.h, clamp(hsl.s-30,0,50), 14);
+  palette=[
+    {hex:rgbToHex(baseC.r,baseC.g,baseC.b), role:"ベース 70%"},
+    {hex:rgbToHex(mainC.r,mainC.g,mainC.b), role:"メイン 25%"},
+    {hex:rgbToHex(accentC.r,accentC.g,accentC.b), role:"アクセント 5%"},
+    {hex:rgbToHex(subC.r,subC.g,subC.b), role:"サブ"},
+    {hex:rgbToHex(textC.r,textC.g,textC.b), role:"文字・締め色"}
+  ];
+  renderPalette(); renderRatio();
+}
+function renderPalette(){
+  const box=$("palette"); box.innerHTML="";
+  palette.forEach(p=>box.appendChild(swatchEl(p.hex, p.role, "")));
+  if(!palette.length) box.innerHTML='<span class="hint">「配色を作る」を押してください。</span>';
+}
+function renderRatio(){
+  const bar=$("ratioBar");
+  if(palette.length<3){ bar.innerHTML=""; return; }
+  const seg=[[palette[0],70,"ベース"],[palette[1],25,"メイン"],[palette[2],5,"CTA"]];
+  bar.innerHTML=seg.map(([p,w,name])=>'<div style="width:'+w+'%;background:'+p.hex+'">'+name+" "+w+'%</div>').join("");
+}
+$("makePalette").addEventListener("click",buildPalette);
+function renderMock(el, pal){
+  if(!pal || pal.length<3){
+    el.style.background="#f3ede5"; el.style.color="#8a7f72";
+    el.innerHTML='<div class="ttl">見本タイトル</div><div class="sub">配色をA/Bに反映すると、ここに当てはめて表示します。</div><div class="cta" style="background:#ddd;color:#888;">ボタン</div>';
+    return;
+  }
+  const base=pal[0].hex, main=pal[1].hex, accent=pal[2].hex, text=pal[4]?pal[4].hex:"#141210";
+  el.style.background=base; el.style.color=text;
+  el.innerHTML='<div class="ttl" style="color:'+main+'">見本タイトル<br>キャッチコピー</div>'+
+    '<div class="sub">説明の文がここに入ります。配色の役割（ベース／メイン／アクセント）で見え方を確認します。</div>'+
+    '<div class="cta" style="background:'+accent+';color:'+bestTextOn(hexToRgb(accent))+'">今すぐ試す →</div>';
+}
+$("setA").addEventListener("click",()=>{ if(!palette.length) buildPalette(); paletteA=palette.slice(); renderMock($("mockA"),paletteA); toast("A案に反映しました"); });
+$("setB").addEventListener("click",()=>{ if(!palette.length) buildPalette(); paletteB=palette.slice(); renderMock($("mockB"),paletteB); toast("B案に反映しました"); });
+
+/* ---------- コントラスト ---------- */
+function updateContrast(){
+  const fg=hexToRgb($("fgInput").value), bg=hexToRgb($("bgInput").value);
+  if(!fg||!bg) return;
+  const ratio=contrastRatio(fg,bg);
+  $("ratioNum").textContent=ratio.toFixed(2)+" : 1";
+  const badge=(ok,label)=>'<span class="badge '+(ok?"ok":"ng")+'">'+label+(ok?" ○":" ×")+'</span>';
+  $("ratioBadges").innerHTML=badge(ratio>=4.5,"AA 通常文字")+" "+badge(ratio>=3,"AA 大きな文字")+" "+badge(ratio>=7,"AAA 通常文字");
+  const sug = ratio>=4.5 ? "この組み合わせは読みやすいです。" :
+    "弱い場合は、文字色を "+bestTextOn(bg)+" にすると比が "+contrastRatio(hexToRgb(bestTextOn(bg)),bg).toFixed(2)+" : 1 になります。背景を濃く／薄くするのも手です。";
+  $("contrastSuggest").textContent=sug;
+}
+$("fgInput").addEventListener("input",updateContrast);
+$("bgInput").addEventListener("input",updateContrast);
+$("swapContrast").addEventListener("click",()=>{ const a=$("fgInput").value; $("fgInput").value=$("bgInput").value; $("bgInput").value=a; updateContrast(); });
+$("bgFromCurrent").addEventListener("click",()=>{ $("bgInput").value=rgbToHex(current.r,current.g,current.b); updateContrast(); });
+
+/* ---------- グラデーション ---------- */
+function updateGradient(copy){
+  const a=hexToRgb($("gradA").value), b=hexToRgb($("gradB").value);
+  if(!a||!b) return;
+  const ha=rgbToHex(a.r,a.g,a.b), hb=rgbToHex(b.r,b.g,b.b);
+  $("gradPreview").style.background="linear-gradient(90deg, "+ha+", "+hb+")";
+  const st=$("gradSteps"); st.innerHTML="";
+  for(let i=0;i<7;i++){
+    const c=mix(a,b,i/6), hx=rgbToHex(c.r,c.g,c.b);
+    const d=document.createElement("div"); d.style.background=hx; d.title=hx;
+    d.addEventListener("click",()=>setCurrent(c,true));
+    st.appendChild(d);
+  }
+  if(copy) copyText("background: linear-gradient(90deg, "+ha+", "+hb+");","CSS");
+}
+$("gradA").addEventListener("input",()=>updateGradient(false));
+$("gradB").addEventListener("input",()=>updateGradient(false));
+$("gradFromCurrent").addEventListener("click",()=>{ $("gradB").value=rgbToHex(current.r,current.g,current.b); updateGradient(false); });
+$("copyCss").addEventListener("click",()=>updateGradient(true));
+
+/* ---------- 案件フォルダ ---------- */
+function saveProjects(){ try{ localStorage.setItem("cba_projects", JSON.stringify(projects)); }catch(e){} }
+function renderProjects(){
+  const box=$("projects"); box.innerHTML="";
+  if(!projects.length){ box.innerHTML='<p class="hint">まだ保存がありません。配色を作ってから保存してみてください。</p>'; return; }
+  projects.forEach((p,idx)=>{
+    const d=document.createElement("div"); d.className="proj";
+    const mini=p.colors.map(h=>'<div style="background:'+h+'"></div>').join("");
+    d.innerHTML='<div class="name"></div><div class="mini">'+mini+'</div>';
+    d.querySelector(".name").textContent=p.name+"（"+p.colors.join(" / ")+"）";
+    const load=document.createElement("button"); load.className="small"; load.type="button"; load.textContent="この配色を開く";
+    load.addEventListener("click",()=>{
+      palette=p.colors.map((h,i)=>({hex:h, role:["ベース 70%","メイン 25%","アクセント 5%","サブ","文字・締め色"][i]||""}));
+      renderPalette(); renderRatio();
+      const c=hexToRgb(p.colors[1]||p.colors[0]); if(c) setCurrent(c,false);
+      toast("「"+p.name+"」を開きました");
+    });
+    const del=document.createElement("button"); del.className="small"; del.type="button"; del.textContent="削除";
+    del.style.marginLeft="6px";
+    del.addEventListener("click",()=>{ projects.splice(idx,1); saveProjects(); renderProjects(); });
+    d.appendChild(load); d.appendChild(del); box.appendChild(d);
+  });
+}
+$("saveProj").addEventListener("click",()=>{
+  if(!palette.length) buildPalette();
+  const name=($("projName").value||"").trim()||("バナー "+new Date().toLocaleDateString("ja-JP"));
+  projects.unshift({name:name, colors:palette.map(p=>p.hex), savedAt:Date.now()});
+  saveProjects(); renderProjects(); toast("「"+name+"」に保存しました");
+});
+
+/* ---------- 初期表示 ---------- */
+setCurrent(current,false);
+buildPalette(); paletteA=palette.slice(); renderMock($("mockA"),paletteA); renderMock($("mockB"),null);
+renderHistory(); renderProjects(); updateContrast(); updateGradient(false);
+</script>
+</body>
+</html>
